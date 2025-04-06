@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Set variables (modify as needed)
+REPO_NAME="my-project"
+REMOTE_URL="https://github.com/your-username/my-project.git"
+BRANCH_NAME="feature-branch"
+README_FILE="README.md"
+
+# Step 1: Initialize a new Git repository
+echo "Initializing Git repository..."
+mkdir "$REPO_NAME"
+cd "$REPO_NAME" || exit
+git init
+
+# Step 2: Create a README.md file
+echo "Creating README.md file..."
+echo "# My First Git Project" > "$README_FILE"
+
+# Step 3: Stage the README file
+echo "Staging README.md..."
+git add "$README_FILE"
+
+# Step 4: Commit the changes
+echo "Committing changes..."
+git commit -m "Initial commit: Add README.md"
+
+# Step 5: Create and switch to a new branch
+echo "Creating and switching to branch '$BRANCH_NAME'..."
+git checkout -b "$BRANCH_NAME"
+
+# Step 6: Make changes in the new branch (example)
+echo "Updating README.md with a new feature..."
+echo "This is a new feature" >> "$README_FILE"
+
+# Step 7: Stage and commit the changes
+echo "Staging and committing the changes..."
+git add "$README_FILE"
+git commit -m "Update README with new feature"
+
+# Step 8: Switch back to the main branch
+echo "Switching back to the 'main' branch..."
+git checkout main
+
+# Step 9: Merge the feature branch into the main branch
+echo "Merging '$BRANCH_NAME' into 'main'..."
+git merge "$BRANCH_NAME"
+
+# Step 10: Add the remote repository
+echo "Adding remote repository..."
+git remote add origin "$REMOTE_URL"
+
+# Step 11: Push the changes to the remote repository
+echo "Pushing changes to the remote repository..."
+git push -u origin main
+
+# Done
+echo "Git workflow complete!"
+ 
