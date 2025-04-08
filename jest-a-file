@@ -52,8 +52,11 @@ git remote add origin "$REMOTE_URL"
 # Step 11: Push the changes to the remote repository
 echo "Pushing changes to the remote repository..."
 git push -u origin main
-
 # Done
 echo "Git workflow complete!"
-                                                             "echo" powered by "stunning...*"
+                                                            "echo" hello everone toz "stunning world *"
+							         
+							    
+
+
 
