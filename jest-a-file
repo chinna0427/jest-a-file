@@ -53,10 +53,14 @@ git remote add origin "$REMOTE_URL"
 echo "Pushing changes to the remote repository..."
 git push -u origin main
 # Done
-echo "Git workflow complete!"
+echo "Git workflow completed
+
+
+
+
                                                             "echo" hello everone toz "stunning world *"
 							         
-							    
+								       avishka..!
 
 
 
